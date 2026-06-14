@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito+Sans:wght@200;1000&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: hsl(0 0% 100%);
+    --foreground: rgb(27, 27, 28);
+    --card: rgb(255, 255, 255);
+    --card-foreground: rgb(2, 8, 23);
+    --popover: rgb(255, 255, 255);
+    --popover-foreground: rgb(2, 8, 23);
+    --navy-blue: rgb(3, 31, 48);
+    --primary: rgb(141, 95, 255);
+    --primary-foreground: hsl(210 40% 98%);
+    --light-green: rgb(32, 178, 40);
+    --secondary: rgb(3, 31, 48);
+    --secondary-foreground: hsl(210 48% 98%);
+    --muted: rgb(244, 242, 247);
+    --muted-foreground: rgb(123, 122, 128);
+    --destructive: rgb(249, 214, 214);
+    --destructive-foreground: rgb(236, 43, 43);
+    --success: rgb(209, 255, 241);
+    --success-foreground: rgb(53, 217, 168);
+    --warning: rgb(253, 242, 202);
+    --warning-foreground: rgb(255, 180, 67);
+    --info: rgb(222, 237, 255);
+    --info-foreground: rgb(61, 150, 255);
+    --border: rgb(217, 215, 223);
+    --input: rgb(234, 232, 240);
+    --ring: rgb(141, 95, 255);
+    --icon: rgb(3, 31, 48);
+    --radius: 0.6rem;
+  }
+
+  /* Dark Mode */
+  .dark {
+    --background: hsl(0 0% 100%);
+    --foreground: rgb(27, 27, 28);
+    --navy-blue: rgb(3, 31, 48);
+    --primary: rgb(141, 95, 255);
+    --primary-foreground: hsl(210 40% 98%);
+    --secondary: rgb(3, 31, 48);
+    --light-green: rgb(32, 178, 40);
+    --secondary-foreground: hsl(210 40% 98%);
+    --muted: rgb(244, 242, 247);
+    --muted-foreground: rgb(123, 122, 128);
+    --destructive: rgb(249, 214, 214);
+    --destructive-foreground: rgb(236, 43, 43);
+    --success: rgb(209, 255, 241);
+    --success-foreground: rgb(53, 217, 168);
+    --warning: rgb(253, 242, 202);
+    --warning-foreground: rgb(255, 180, 67);
+    --info: rgb(222, 237, 255);
+    --info-foreground: rgb(61, 150, 255);
+    --border: rgb(234, 232, 240);
+    --input: rgb(203, 185, 247);
+    --ring: rgb(141, 95, 255);
+    --icon: rgb(3, 31, 48);
+    --radius: 0.5rem;
+  }
+
+  *::after,
+  *::before {
+    @apply m-0 box-border border-border p-8 font-nunito tracking-[0.02em];
+  }
+
+  body {
+    @apply bg-background text-black;
+  }
+
+
+
+  .gcl-form-control:focus {
+    border: 2px solid rgb(203, 185, 247) !important;
+    outline: none !important;
+    box-shadow: 0 0 0 0.15rem rgba(141, 95, 255, 0.25) !important;
+  }
+}
+
+@layer utilities {
+  .bg-navy-blue {
+    background-color: var(--navy-blue);
+  }
+}
